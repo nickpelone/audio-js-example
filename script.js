@@ -6,15 +6,15 @@
     var sounds = document.getElementsByTagName("audio");
     var boxes = document.getElementsByClassName("box");
 
-    /* sets the onClick event of a Specific Box(div) that it is told.
+    /* defines a function that sets the onClick event of a Specific Box(div) that it is told.
         The event itself is to play or pause a sound when a click occurs
         The sound that gets associated is a number you put in that represents the sound in the list of all sounds in your HTML (remember, it starts at 0)
 */
     function attatchClickEvent(specificBox, soundNumber) {
         specificBox.onclick = function () {
-            if(sounds[soundNumber].paused){
-            sounds[soundNumber].play();
-            }else{
+            if (sounds[soundNumber].paused) {
+                sounds[soundNumber].play();
+            } else {
                 sounds[soundNumber].pause();
             }
         };
@@ -33,7 +33,7 @@
     attatchClickEvent(boxes[2], 2);
 
     This doesn't seem so bad when you only have two or three, but this same three-line
-    solution works for an infinite number of stuff.
+    solution below works for an infinite number of stuff.
 
     */
 
